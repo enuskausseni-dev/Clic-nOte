@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- //LINK CSS STYLESHEET -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profilStyle.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Quick Note</title>
+</head>
+<body>
+    <!-- splash screen -->
+    <div id="splash-screen">
+        <img src="icons/notebook.svg" alt="logo" class="logo">
+        <h1>Clic nOte</h1>
+        <p>Chargement...</p>
+        <div class="loader"></div>
+    </div> 
+    <!-- creation de l'application -->
+    <div class="app" id="app">
+        <!-- en tete -->
+        <div class="note-tete">
+            <h1>Clic nOte</h1>
+            <input type="search" placeholder="Chercher un utilisateur">
+            <button id="add-note" class="button">Creer</button>
+            <button id="profil-btn" class="btn-profil">
+                <img src="icons/user.svg" alt="profil" class="profil">
+            </button>
+        </div>
+
+        <!-- pro screen -->
+         <div class="profil-contenaire" id="profil-contenaire">
+            <div class="profil-effect">
+                <div class="profil-parent">
+                    <div class="profil-screen" id="profil">
+                        <div class="profil-head">
+                            <button id="retour">✖</button>
+                            <button id="parametre">⚙</button>
+                        </div>
+                        <div class="profil-card">
+                            <img alt="" id="photo-profil" class="photo-profil">
+                            <span id="nom" class="nom"></span>
+                            <span id="bio" class="bio"></span>
+                            <button id="modifier-rofil">modifier profil</button>
+                        </div>
+                        <div class="profil-stats"></div>
+                        <div class="user-note"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- formuaire de modification profil -->
+         <div class="update-profile" id="update-profile">
+            <div class="update-profil-contenaire">
+                <form action="" id="form-profil">
+                    <label for="photo-profil-form" class="input-file">
+                       <img src="icons/camera.svg" id="apercu-photo" alt="">
+                    </label>
+                    <input type="file" id="photo-profil-form" accept="image/*" >
+                    <input type="text" id="user-name-uplod" placeholder="Nom d'utilisateur">
+                    <textarea name="" placeholder="votre bio" id="bio-upload-profil" class="bio-upload-profil"></textarea>
+                    <button type="submit">Enregistrer</button>
+                </form>
+            </div>
+         </div>
+
+        <!-- popup d'inscription -->
+        <div class="login-popup" id="popup-inscription">
+            <div class="login">
+                <span class="title">Inscription</span>
+                <div class="sing-up-form">
+                    <div class="input">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" placeholder="nom">
+                        <small class="error" id="user_name_error"></small>
+                    </div>
+
+                    <div class="input">
+                        <label for="email">adrese email</label>
+                        <input type="email" id="email" placeholder="email">
+                        <small class="error" id="email_error"></small>
+                    </div>
+
+                    <div class="input">
+                        <label for="password">Mot e passe</label>
+                        <input type="password" id="password" placeholder="mot de passe">
+                        <small class="error" id="passeword_error"></small>
+                    </div>
+                    <p class="erreur"></p>
+                    <button id="sing-up-btn">S'inscrire</button>
+                </div><hr>
+                <span class="or">ou</span><hr>
+                <button id="login-btn">Se connecter</button>
+            </div>
+        </div>
+
+        <!-- popup de connexion -->
+        <div class="connextion-popup" id="popup-connexion">
+            <div class="login">
+                <span class="title">connectez-vous <br> a votre compte</span>
+                   <div class="input">
+                        <label for="email">adrese email</label>
+                        <input type="email" id="email-login" placeholder="email">
+                        <small class="error" id="email_errorc"></small>
+                    </div>
+
+                    <div class="input">
+                        <label for="password">Mot e passe</label>
+                        <input type="password" id="password-login" placeholder="mot de passe">
+                        <small class="error" id="passeword_errorc"></small>
+                    </div>
+
+                    <button id="connexion">Se connecter</button>
+            </div>
+        </div>
+
+        <!-- formulaire de publication de notes -->
+        <div class="popup" id="popup-note">
+            <div class="profil-effect">
+                <div class="login">
+                    <h1>Notes</h1>
+                    <div class="note-form">
+                        <div class="title">
+                            <p>titre</p>
+                            <input type="text" id="note-title" placeholder="ajouer le titre...">
+                            <small class="error" id="title_error"></small>
+                        </div>
+                        
+                        <div class="title">
+                            <p>desription</p>
+                            <input type="text" id="note-description" placeholder="ajouer le description...">
+                        </div>
+
+                        <div class="title">
+                            <p>note</p>
+                            <textarea name="" id="note-text" placeholder="ajouter le note..."></textarea>
+                            <small class="error" id="note_error"></small>
+                        </div>
+                    </div>
+                    <div class="note-button">
+                        <button id="add-note-btn">Ajouter</button>
+                        <button id="cancel-btn">Annuler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenaire-note" id="contenaire-note"></div>
+    </div>
+
+    <!-- // CHARGEMENT DU FICHIER JAVASCRIPT -->
+
+    <script type="module" src="js/app.js"></script>
+    
+    
+    
+</body>
+</html>

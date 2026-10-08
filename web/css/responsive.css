@@ -1,0 +1,261 @@
+/* responsive en mode mobile d'en tete */
+/* ============================= */
+/* RESPONSIVE MOBILE */
+/* ============================= */
+
+@media screen and (max-width: 600px) {
+
+    /* Empêcher les débordements */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .app {
+        width: 100%;
+        min-height: 100vh;
+        padding: 10px;
+    }
+
+    /* ============================= */
+    /* EN-TÊTE */
+    /* ============================= */
+
+    .note-tete {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 5px;
+    }
+
+    .note-tete h1 {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .note-tete input {
+        width: 100%;
+        max-width: 100%;
+        height: 40px;
+        font-size: 14px;
+        order: 3;
+    }
+
+    .note-tete button {
+        font-size: 16px;
+        padding: 8px 12px;
+        font-weight: bold;
+    }
+
+    .note-tete .btn-profil {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .note-tete .profil {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ============================= */
+    /* CONTENEUR DES NOTES */
+    /* ============================= */
+
+    .contenaire-note {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    /* ============================= */
+    /* CARTE D'UNE NOTE */
+    /* ============================= */
+
+    .carte-note {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+        border-radius: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .profil-note {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .profil-note .image {
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .profil-note .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .profil-note .name {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: anywhere;
+    }
+
+    .profil-note .user-name {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .profil-note .bio {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .carte-note .note {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .carte-note .title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .carte-note .description {
+        font-size: 16px;
+    }
+
+    .carte-note .content {
+        font-size: 20px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    /* ============================= */
+    /* POPUPS ET FORMULAIRES */
+    /* ============================= */
+
+    .login-popup,
+    .connextion-popup,
+    .popup,
+    .update-profile {
+        padding: 12px;
+    }
+
+    .login {
+        width: 100%;
+        /* max-width: 380px; */
+        max-height: 100vh;
+        overflow-y: auto;
+        padding: 20px 15px;
+        border-radius: 15px; 
+    }
+
+    .login input,
+    .login textarea {
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .login button {
+        max-width: 100%;
+    }
+
+    .note-form {
+        width: 100%;
+    }
+
+    .note-form textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .note-button {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .note-button button {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* ============================= */
+    /* PROFIL */
+    /* ============================= */
+
+    .profil-contenaire{
+        display: none;
+    }
+    .profil-parent,
+    .profil-screen {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .profil-screen {
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .profil-card {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profil-card .photo-profil {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .profil-card .nom {
+        font-size: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    .profil-card .bio {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .profil-stats {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .user-note {
+        width: 100%;
+    }
+}

@@ -1,0 +1,14 @@
+# variables secrets
+.env
+
+# node_modules
+node_modules/
+
+#vscode
+.vscode/
+
+#logs
+logs/
+
+#fichiers temporaires
+*.tmp

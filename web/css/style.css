@@ -1,0 +1,323 @@
+:root{
+    --bg : #efede9;
+    --btn-color : #f09410;
+    --btn-over-color : #dc8000;
+    --bg-popup : #5f1e00;
+    --border-color : #7d2800;
+    --text-color1 : #000000;
+    --error : red;
+}
+
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "verdana";
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text-color1);
+}
+#splash-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#splash-screen h1{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    z-index: 999;
+}
+#splash-screen p{
+    color: rgb(0, 0, 0);
+    z-index: 999;
+}
+
+#splash-screen .logo{
+    width: 80px;
+}
+
+.loader{
+    width: 45px;
+    height: 45px;
+    border: 5px solid rgba(51, 51, 51, 0.3);
+    border-top: 5px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    margin-top: 20px;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+#app{
+    display: none;
+}
+
+.app{
+    margin: 10px 0;
+    padding: 0 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app .note-tete{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.app .note-tete .profil{
+    width: 25px;
+    height: 25px;
+    padding: 5px 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.6s ease;
+}
+.app .note-tete .profil:hover{
+    background-color: #f09410;
+    color: #fff;
+}
+
+.app .note-tete input{
+    background-color: transparent;
+    color: var(--text-color1);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.app .note-tete input:focus{
+    outline: none;
+}
+
+.app .note-tete .button{
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--btn-color);
+    cursor: pointer;
+    border-radius: 10px;
+    color: black;
+    transition: 0.4s ease;
+}
+.btn-profil{
+    background-color: transparent;
+    border: none;
+}
+
+.btn-profil:hover{
+    background-color: transparent;
+}
+
+.app .note-tete .button:hover{
+    background-color: var(--btn-over-color);
+}
+
+
+.login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    color: #1b1100;
+    padding: 15px 25px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+}
+
+.connextion-popup{
+    display: none;
+}
+#popup-inscription{
+    display: none;
+    
+}
+
+.login .title{
+    color: var(--text-color1);
+    font-size: 18px;
+    align-self: center;
+}
+
+.error{
+    color: red;
+    font-size: 14px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.card-form{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 20px 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 15px;
+    box-shadow:5px 5px 10px rgba(0,0,0,0.2) ;
+}
+#popup-note{
+    display: none;
+}
+
+
+.contenaire-note{
+    margin-top:10px ;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.carte-note {
+    width: 200px;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profil-note{
+    width: 100%;
+    display: flex;
+    gap: 5;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d1d1d0;
+}
+
+.profil-note .image{
+    width: 35%;
+}
+
+.profil-note .image img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profil-note .name{
+    display: flex;
+    flex-direction: column;
+}
+
+.profil-note .name .user-name{
+    font-size: 14px;
+}
+
+.profil-note .name .bio{
+    font-size: 8px;
+}
+
+.note{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.note .title {
+    font-size: 14px;
+}
+.note .description{
+    margin-top: 5px;
+    color: gray;
+    font-size: 10px;
+}
+
+.note .content{
+    font-size: 12px;
+}
+
+/* formule de note */
+.login h1{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+/* note-form */
+.note-form{
+    margin-left: -50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-form .title{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.note-form .title p{
+    font-size: 12px;
+    text-transform: capitalize;
+    color: gray;
+}
+
+.note-form .title input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+}
+.note-form .title input:focus{
+    outline: none;
+}
+.note-form .title textarea{
+    width: 100%;
+    height: 50px;
+    resize: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+}
+.note-form .title textarea:focus{
+    outline: none;
+}
+
+.note-button{
+    margin-top: 10px;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    gap: 30px;
+}
+
+.note-button::first-child{
+    background-color: #dc8000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

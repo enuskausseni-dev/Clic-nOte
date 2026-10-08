@@ -1,0 +1,172 @@
+.profil-contenaire{
+    display: none;
+}
+.profil-effect{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+.profil-parent{
+    background-color: #fff;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 15px;
+    z-index: 1001;
+
+}
+.profil-screen{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profil-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profil-head button{
+    background-color: transparent;
+    color: black;
+    padding: 4px 7px;
+    border: none;
+    font-size: 18px;
+    transition: 0.5s ease;
+}
+
+.profil-head button:hover{
+    background-color: rgb(218, 219, 221);
+    border-radius: 5px;
+    border: none;
+}
+
+.profil-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profil-card img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profil-card .nom{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.profil-card .bio{
+    font-size: 10px;
+    color: gray;
+}
+
+.profil-card button{
+    font-size: 12px;
+    padding: 4px 7px;
+    background-color: rgb(0, 0, 39);
+    color: #fff;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s ease ;
+}
+
+.profil-card button:hover{
+    transform: perspective(600px) rotateX(20deg) rotateY(-20deg) scale(1.1);
+}
+
+.update-profile{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: calc(1);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/* update profil style */
+.update-profil-contenaire{
+    width: 250px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px 20px;
+
+}
+
+#form-profil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+#photo-profil-form{
+    /* display: block;
+    opacity: 1;
+    pointer-events: auto; */
+     display: none; 
+}
+
+.input-file{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    cursor: pointer;
+   
+}
+
+
+
+.input-file img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#user-name{
+    padding: 4px 7px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    border: 1px solid black;
+}
+
+#user-name:focus{
+    outline: none;
+}
+
+.bio-upload-profil{
+    padding: 4px 7px;
+    border-radius: 5px;
+    width: 100% ;
+    height: 50px;
+    resize: none;
+    border: none;
+    border: 1px solid black;
+}
+
+.bio-upload-profil{
+    outline: none;
+}
+
+
