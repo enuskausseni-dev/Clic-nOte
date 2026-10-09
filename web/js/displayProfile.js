@@ -1,4 +1,5 @@
 import { ouvrir_popup_inscription } from "./auth.js"
+import { API_URL } from "./url.js"
 
 const profil = document.getElementById("profil-btn")
 
@@ -30,7 +31,7 @@ async function profil_show(){
         ouvrir_popup_inscription() 
         return
     }
-    const response = await fetch("/users/me",
+    const response = await fetch(`${API_URL}/users/me`,
         {
             method: "GET",
             headers : {

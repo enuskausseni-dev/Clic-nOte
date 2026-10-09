@@ -1,3 +1,6 @@
+// importation url
+import { API_URL } from "./url.js"
+
 const nom = document.getElementById("name");
 const email = document.getElementById("email")
 const mot_de_passe = document.getElementById("password")
@@ -33,7 +36,7 @@ function cleanErrors() {
 
 async function sing_up() {
     cleanErrors()
-    const response = await fetch("/inscription", {
+    const response = await fetch(`${API_URL}/inscription`, {
         method : "POST",
         headers : {
             "Content-Type" : "application/json"
@@ -80,7 +83,7 @@ const emailConn = document.getElementById("email-login")
 const mot_de_passe_conn = document.getElementById("password-login")
 async function login() {
     cleanErrors()
-    const response = await fetch("/connexion", {
+    const response = await fetch(`${API_URL}/connexion`, {
         method : "POST",
         headers : {
             "Content-Type" : "application/json"
@@ -138,7 +141,7 @@ export async function verifier_session() {
     if(!token){
        return false
     }
-    const response = await fetch("/users/me",
+    const response = await fetch(`${API_URL}/users/me`,
         {
             headers : {
                 "Authorization" : `Bearer ${token}`

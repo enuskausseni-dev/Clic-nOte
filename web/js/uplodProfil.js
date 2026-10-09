@@ -1,4 +1,5 @@
 console.log("Mon fichier uploadProfil.js est chargé !");
+import { API_URL } from "./url.js"
 
 // import { fermer_ecran_profil } from "./displayProfile"
 
@@ -32,7 +33,7 @@ async function modifierInfosProfil() {
     const user_name = user_name_upload.value
     const bio = bio_upload.value
 
-    const response = await fetch("/users/me", {
+    const response = await fetch(`${API_URL}/users/me`, {
         method: "PUT",
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -58,7 +59,7 @@ async function modifierPhotoProfil() {
 
     const formData = new FormData()
     formData.append("photo", photo)
-    const response = await fetch("/users/me/photo", 
+    const response = await fetch(`${API_URL}/users/me/photo`, 
         {
             method : "PUT",
             headers : {

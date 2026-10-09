@@ -1,4 +1,6 @@
-// variable generale qui stock les note
+// URL
+import { API_URL } from "./url.js"
+//  / variable generale qui stock les note
 let tous_les_notes = []
 // Recuperation de ressource
 const contenaire_note = document.getElementById("contenaire-note")
@@ -7,7 +9,7 @@ const contenaire_note = document.getElementById("contenaire-note")
 export async function display_note(notes = null){
     try{
         if(!notes){
-            const response = await fetch("/fil_actus");
+            const response = await fetch(`${API_URL}/fil_actus`);
             if(!response.ok) throw new Error("Erreur du reseaux")
             notes = await response.json()
             console.log(notes)

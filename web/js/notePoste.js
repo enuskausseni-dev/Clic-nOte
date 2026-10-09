@@ -1,5 +1,6 @@
 import { fermer_popup_note} from "./auth.js"
 import { display_note } from "./displayNote.js"
+import { API_URL } from "./url.js"
 
 // recuperation de ressource
 console.log("Fichier Poste note chargé")
@@ -16,7 +17,7 @@ async function creer_note() {
     console.log("titre :" , titre.value)
     console.log("description :", description.value)
     console.log("note : ", note.value   )
-    const responce = await fetch("/notes", {
+    const responce = await fetch(`${API_URL}/notes`, {
         method : "POST",
         headers : {
             "Content-Type" : "application/json",
