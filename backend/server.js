@@ -21,7 +21,8 @@ app.use(auth_routes)
 app.use("/users",user_route)
 app.use(notes_route)
 
-app.listen(3000, ()=>{
+const PORT = process.env.PORT || 5000
+app.listen(PORT, ()=>{
     console.log(process.env)
     console.log("serveur demarer")
 })
