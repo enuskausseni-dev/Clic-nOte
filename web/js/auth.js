@@ -49,6 +49,8 @@ async function sing_up() {
     })
 
     const data = await response.json()
+    console.log("URL :", response.url);
+    console.log("Statut :", response.status, data);
     if(!response.ok){
         console.log(data.error)
         const errors = data.errors?.fieldErrors;
@@ -95,6 +97,8 @@ async function login() {
     })
 
     const data = await response.json()
+    console.log("URL :", response.url);
+    console.log("Statut :", response.status, data);
     if(!response.ok){
         console.log(data.error)
         const errors = data.errors?.fieldErrors;
