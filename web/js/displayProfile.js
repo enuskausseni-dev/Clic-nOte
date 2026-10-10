@@ -47,6 +47,9 @@ async function profil_show(){
     photo_profil.src = data.photo_profil
 }
 
+// fonction pour displaye mains notes
+
+
 profil.addEventListener("click", async () =>{
     console.log("clik")
     ouvrir_ecran_profil()

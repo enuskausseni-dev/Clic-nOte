@@ -27,6 +27,9 @@ route.use(authentification_midd)
 // route POST
 route.post("/notes", validation_midd.valider(schema_note), note_controller.create_note)
 
+// route pour voir le notes d'un utilisateur
+route.get("/notes", note_controller.get_my_notes)
+
 
 // exportation de route
 module.exports = route
